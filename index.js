@@ -16,6 +16,9 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     .catch(err => console.log('MongoDB connection error: ', err));
 
 // Use routes
+app.get('/', (_req, res) => {
+    res.send('Welcome node express in running');
+});
 app.use('/api/auth', authRoutes);
 
 // Start the server
