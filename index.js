@@ -19,6 +19,9 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.get('/', (_req, res) => {
     res.send('Welcome node express in running.');
 });
+app.get('/test', (_req, res) => {
+    res.send('Welcome node express in running.test');
+});
 app.use('/api/auth', authRoutes);
 
 // Start the server
