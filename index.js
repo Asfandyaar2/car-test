@@ -22,6 +22,9 @@ app.get('/', (_req, res) => {
 app.get('/test', (_req, res) => {
     res.send('Welcome node express in running.test');
 });
+app.get('/test2', (_req, res) => {
+    res.send('Welcome node express in running.test2');
+});
 app.use('/api/auth', authRoutes);
 
 // Start the server
